@@ -54,7 +54,11 @@ def returns(fconv):
     def wrapf(func):
         def wrapper(self, *args, **kwargs):
 #             try:
-                return fconv(func(self, *args, **kwargs))
+                if fconv == bool:
+                    return fconv(int(func(self, *args, **kwargs)))
+                else:
+                    return fconv(func(self, *args, **kwargs))
+                #return fconv(res)
 #             except ValueError:
 #                 return -1
         return wrapper
