@@ -87,6 +87,15 @@ To install Nanpy Python library on your master device just type:
 
     pip install nanpy
 
+To uninstall::
+
+    pip uninstall nanpy
+
+To install the latest version from Github::
+
+    pip install https://github.com/nanpy/nanpy/archive/master.zip
+
+
 How to contribute
 -----------------
 
@@ -106,11 +115,12 @@ Bug reports
 -----------
 
 - try the blink.py example
-- try to test the function without Nanpy, using only Arduino. If the problem remains then it is not a Nanpy bug.
+- try to test the function without Nanpy, using only Arduino code. If the problem remains then it is not a Nanpy bug.
 - enable logging: `import logging;logging.basicConfig(level=logging.DEBUG)`
 - attach the log messages
 - attach your program. The program should be as small as possible which demonstrates the bug.
 - check cfg.h. All needed functions are enabled?
+- Run `examples/firmware_check.py` to check cfg.h again. All needed functions are listed?
 - attach your cfg.h
 - describe your hardware
 
